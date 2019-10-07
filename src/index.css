@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input[type="text"] {
+  border: 1px solid rgba(32,124,229,1);
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 250px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+button {
+  background: linear-gradient(to right, rgba(32,124,229,1) 0%, rgba(73,155,234,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207ce5', endColorstr='#499bea', GradientType=1 );
+  box-sizing: border-box;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  width: 150px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  margin-left: 5px; 
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.8, 0.7, 0.72, 0.78);
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #696969;
+  color: #fff;
+  font-size: 16px;
+}
+
+.wrap {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: auto;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 15px; 
+}
+
+.weather {
+  margin-top: 30px; 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.weather-item {
+  margin-right: 15px;
+  border-radius: 20px;
+  width: 200px;
+  min-height: 250px;
+  box-shadow: 0 5px 4px 1px rgba(141, 141, 141, 0.2);
+}
+
+.weather-info {
+  background: linear-gradient(to right, rgba(32,124,229,1) 0%, rgba(73,155,234,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#207ce5', endColorstr='#499bea', GradientType=1 );
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 20px 20px 0 0;
+  color: #fff;
+  text-align: left;
+  font-size: 16px;
+  height: 200px;
+}
+
+.temperature {
+  font-size: 40px;
+}
+
+.date {
+  padding: 5px 5px 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.check-wrapper {
+  margin: 0 auto;
+  display: block;
+  height: 60px;
+  width: 130px;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+  font-size: 0;
+}
+
+#checkbox {
+  display: none;
+}
+#checkbox.active ~ .left {
+  background: #fff;
+  color: #000;
+}
+#checkbox.active ~ .right {
+  background: rgba(32,124,229,1);
+  color: #fff;
+}
+
+.left, .right {
+  height: 100%;
+  width: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 30px;
+  line-height: 60px;
+  color: #fff;
+  background: rgba(32,124,229,1);
+  transition: all 200ms cubic-bezier(0.8, 0.7, 0.72, 0.78);
+}
+
+.right {
+  background: #fff;
+  color: #000;
+}
+
+.cache {
+  background: red;
+  margin: 0;
+  display: block;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.cache:hover {
+  animation: rotate 2s infinite; 
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.settings p {
+  margin-bottom: 10px;
+}
+
+.cache-block {
+  margin-top: 40px;
+}
+
+.settings-icon img {
+  max-width: 30px;
+  display: block;
+  filter: invert(100%);
+}
+
+.weather-icon img {
+  max-width: 30px;
+  display: block;
+}
+
+.settings-icon {
+  transition: all 200ms cubic-bezier(0.8, 0.7, 0.72, 0.78);
+}
+
+.settings-icon:hover {
+  opacity: 0.5;
+}
+
+.error-msg {
+  color: firebrick;
+  margin-top: 25px;
+  font-size: 22px;
+}
