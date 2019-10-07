@@ -20,19 +20,19 @@ export default class MainLayout extends React.Component {
         const data = await api_url.json();
 
         this.setState({
-          error: undefined
+          error: 'City not found'
         });
 
         this.props.setWeatherData(data);
 
       } catch(err) {
-      //   console.log(err); 
-        this.setState({
-            error: 'City not found'
-        });
+        // console.log(err); 
         this.props.setWeatherData([]);
       }
     } else {
+      this.setState({
+          error: 'Input is empty'
+      });
       this.props.setWeatherData([]);
     }
   }
